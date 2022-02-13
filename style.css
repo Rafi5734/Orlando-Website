@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+.orlando-main {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid #000; */
+    overflow: hidden;
+}
+.orlando-navbar {
+    /* border: 1px solid #000; */
+    width: 100%;
+    /* height: 10vh; */
+    /* display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: row;
+     */
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header-area {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url(https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80); */
+    background-position: center center;
+    background-size: cover;
+}
+/* default css end */
+
+/* navbar regular css start */
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+}
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.site-navbar ul li a {
+    color: #000;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.nav-btn {
+    width: 200px;
+    height: 60px;
+}
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+    border: 3px solid #000;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 50px;
+    display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+}
+.nav-toggler span:before {
+    content: "";
+    transform: translateY(-9px);
+}
+.nav-toggler span:after {
+    content: "";
+    transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+    background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+/* intro-area css start */
+.intro-area {
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.intro-area h2 {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+.intro-area p {
+    font-size: 18px;
+}
+/* intro-area css end */
+
+.orlando-header-slider {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid #000;
+}
+
+/* slidshow started */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* slidshow end */
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 720px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+        position: relative;
+        right: 25px;
+    }
+
+    .site-navbar {
+        min-height: 60px;
+    }
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        left: 0;
+        top: 60px;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #444;
+        background-color: rgba(0, 0, 0, 0.75);
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .site-navbar ul li a {
+        padding: 25px;
+    }
+    .site-navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    .intro-area h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
